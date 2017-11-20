@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rootLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout android:id="@+id/toolbar"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@drawable/title_bar">
+        <TextView
+                android:id="@+id/titleTextView"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_width="match_parent" android:layout_height="39dp"/>
+        <Button
+                android:id="@+id/closeButton"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="24dp" android:layout_height="24dp"
+                android:background="@drawable/icon_close"/>
+        <Button
+                android:id="@+id/backButton"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="24dp" android:layout_height="24dp"
+                android:layout_toRightOf="@id/closeButton"
+                android:background="@drawable/icon_previous"/>
+        <Button
+                android:id="@+id/reloadButton"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_width="24dp" android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_reload"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+              android:layout_below="@id/titleTextView"
+              android:background="#CCC"></View>
+    </RelativeLayout>
+    <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"></WebView>
+</RelativeLayout>
